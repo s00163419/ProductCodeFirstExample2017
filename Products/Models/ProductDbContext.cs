@@ -13,6 +13,8 @@ namespace Products.Models
             Configuration.LazyLoadingEnabled = false;
         }
 
+        //=================================================
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         

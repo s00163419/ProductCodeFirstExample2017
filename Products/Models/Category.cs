@@ -15,8 +15,12 @@ namespace Products.Models
         [Display(Name = "Category ID")]
         public int CategoryId { get; set; }
 
+        //=================================================
+
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
+
+        //=================================================
 
         public virtual ICollection<Product> productsInCategory { get; set; }
     }

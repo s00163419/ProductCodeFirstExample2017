@@ -15,25 +15,37 @@ namespace Products.Models
         [Display(Name = "Product ID")]
         public int ProductId { get; set; }
 
+        //=================================================
+
         [ForeignKey("associatedCategory")]
         public int CategoryId { get; set; }
+
+        //=================================================
 
         [Display(Name = "Product ID")]
         public string Description { get; set; }
 
+        //=================================================
+
         [Column(TypeName="date")]
         [Display(Name = "Date of Last Order")]
         public DateTime? LastOrderDate { get; set; }
+
+        //=================================================
 
         [Column(TypeName = "date")]
         [Display(Name = "Date first stocked")]
         public DateTime? FirstStockedOn { get; set; }
         [Display(Name = "Quantity in Stock")]
 
+        //=================================================
+
         public int QuantityInStock { get; set; }
         [Display(Name = "Unit Price")]
         public float UnitPrice { get; set; }
-        
+
+        //=================================================
+
         public virtual Category associatedCategory { get; set; }
 
     }
